@@ -101,11 +101,11 @@ WSGI_APPLICATION = 'activity_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'outdoor',
-        'USER': 'outdooruser',
-        'PASSWORD': 'outdoor',
-        'HOST': 'localhost',
-        'PORT': '5431',
+        'NAME': 'ddoeo08o8bgo85',
+        'USER': 'bxonxhprqelieb',
+        'PASSWORD': 'b9ad013ef5dbac69f36d8b2c826b4782c1428378f50236dc85b758e45175868a',
+        'HOST': 'ec2-23-23-216-40.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
