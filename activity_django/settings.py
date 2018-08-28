@@ -28,7 +28,7 @@ SECRET_KEY = '-%p*a8mz=las(v@bp+@esp-8&xa7w-^2*t3x-7y&2nx7q0052o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['outdoor-austin.herokuapp.com', '127.0.0.1:8000']
 
 
 # Application definition
@@ -58,9 +58,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000/'
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3000/'
+# )
 
 CORS_ALLOW_CREDENTIALS = True
 
