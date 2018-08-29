@@ -50,7 +50,7 @@ class Main extends Component {
 
   getActivities = async () => {
 
-    const activities = await fetch('https://outdoor-austin.herokuapp.com/api/activities/'});
+    const activities = await fetch('https://outdoor-austin.herokuapp.com/api/activities/');
     const activitiesJson = activities.json();
     return activitiesJson
   }
