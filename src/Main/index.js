@@ -50,7 +50,7 @@ class Main extends Component {
 
   getActivities = async () => {
 
-    const activities = await fetch('http://localhost:8000/api/activities/');
+    const activities = await fetch('https://outdoor-austin.herokuapp.com/');
     const activitiesJson = activities.json();
     return activitiesJson
   }
@@ -62,7 +62,7 @@ class Main extends Component {
     e.preventDefault();
     console.log('this is addActivity');
     try {
-      const createdActivity = await fetch('http://localhost:8000/api/activities/', {
+      const createdActivity = await fetch('https://outdoor-austin.herokuapp.com/', {
         method : 'POST',
         credentials: 'include',
         body : JSON.stringify(activity),
@@ -90,7 +90,7 @@ deleteActivity = async (id, e) => {
   console.log('deleteActivity function is being called, this is the id:', id);
 
   try {
-    const deleteActivity = await fetch('http://localhost:8000/api/activities/' + id + '/', {
+    const deleteActivity = await fetch('https://outdoor-austin.herokuapp.com/' + id + '/', {
       method: 'DELETE',
     });
     const parsedResponse = await deleteActivity.json();
