@@ -33,9 +33,9 @@ class Main extends Component {
   }
   // ---------------------------------------------------
 
-  async componentDidMount('https://outdoor-austin.herokuapp.com/') {
+  async componentDidMount() {
     try {
-      const res = await fetch();
+      const res = await fetch('https://outdoor-austin.herokuapp.com/api/activities/');
       const activities = await res.json();
       this.setState({
         activities
@@ -50,7 +50,7 @@ class Main extends Component {
 
   getActivities = async () => {
 
-    const activities = await fetch('https://outdoor-austin.herokuapp.com/');
+    const activities = await fetch('https://outdoor-austin.herokuapp.com/api/activities/'});
     const activitiesJson = activities.json();
     return activitiesJson
   }
@@ -62,7 +62,7 @@ class Main extends Component {
     e.preventDefault();
     console.log('this is addActivity');
     try {
-      const createdActivity = await fetch('https://outdoor-austin.herokuapp.com/', {
+      const createdActivity = await fetch('https://outdoor-austin.herokuapp.com/api/activities/', {
         method : 'POST',
         credentials: 'include',
         body : JSON.stringify(activity),
@@ -123,7 +123,7 @@ closeAndEdit = async (e) => {
   e.preventDefault();
 
   try {
-    const editActivity = await fetch('http://localhost:8000/' + this.state.editCatId, {
+    const editActivity = await fetch('https://outdoor-austin.herokuapp.com/' + this.state.editCatId, {
       'method': 'PUT',
       credentials: 'include',
       body: JSON.stringify(this.state.activityToEdit),
