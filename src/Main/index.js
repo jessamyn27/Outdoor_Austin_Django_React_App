@@ -33,9 +33,9 @@ class Main extends Component {
   }
   // ---------------------------------------------------
 
-  async componentDidMount() {
+  async componentDidMount('https://outdoor-austin.herokuapp.com/') {
     try {
-      const res = await fetch('http://localhost:8000/api/activities/');
+      const res = await fetch();
       const activities = await res.json();
       this.setState({
         activities
@@ -45,6 +45,7 @@ class Main extends Component {
       return(err)
     }
   }
+  // http://localhost:8000/api/activities/
   // ---------------------------------------------------
 
   getActivities = async () => {
